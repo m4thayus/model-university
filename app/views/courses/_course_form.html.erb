@@ -5,5 +5,7 @@
     <%= f.text_field :time %>
     <%= f.label :description, "Course Description:"%>
     <%= f.text_area :description %>
+    <%= f.label :professor_id %>
+    <%= f.collection_select(:professor_id, Professor.all, :id, :name, prompt: "Choose a Professor") %>
     <%= f.submit %>
 <% end %>

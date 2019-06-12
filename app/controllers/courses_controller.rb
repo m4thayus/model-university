@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
     
     def create
         @course = Course.create(
-            course_params(:name, :description, :time)
+            course_params(:name, :description, :time, :professor_id)
         )
         redirect_to @course
     end
@@ -24,7 +24,7 @@ class CoursesController < ApplicationController
     
     def update
         @course.update(
-            course_params(:name, :description, :time)
+            course_params(:name, :description, :time, :professor_id)
         )
         redirect_to @course
     end
