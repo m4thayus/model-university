@@ -1,0 +1,9 @@
+<%= form_for @course do |f| %>
+    <%= f.label :name, "Course Name:" %>
+    <%= f.text_field :name %>
+    <%= f.label :time, "Course Time:"%>
+    <%= f.text_field :time %>
+    <%= f.label :description, "Course Description:"%>
+    <%= f.text_area :description %>
+    <%= f.submit %>
+<% end %>
