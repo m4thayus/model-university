@@ -1,2 +1,4 @@
 <h1>Professors#index</h1>
-<p>Find me in app/views/professors/index.html.erb</p>
+<% @professors.each do |professor| %>
+    <h2> <%= link_to professor.name, professor %> | <%= professor.field %></h2>
+<% end %>

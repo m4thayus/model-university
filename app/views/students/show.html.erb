@@ -1,2 +1,8 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<h1><%= @student.name %></h1>
+<h2>Class of <%= @student.year %> | <%= @student.major %> Major</h2>
+<h3>Course List: </h3>
+<ul>
+    <% @student.courses.each do |course| %>
+        <li> <%= link_to course.name, course %> | <%= link_to course.professor.name, course.professor %></li>
+    <% end %>
+</ul>
