@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Professor.destroy_all
+Student.destroy_all
+Course.destroy_all
+Lecture.destroy_all
+
 who = Professor.create(name: "Dr. Who", field: "Time Travel")
 rose = Student.create(name: "Rose Tyler", year: 2005, major: "Companionship")
 history = Course.create(
