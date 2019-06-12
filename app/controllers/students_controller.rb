@@ -14,8 +14,10 @@ class StudentsController < ApplicationController
     
     def create
         @student = Student.create(
-            student_params(:name, :year, :major)
+            student_params(:name, :major)
         )
+        @student.year = Time.now.year
+        @student.save
         redirect_to @student
     end
     
@@ -24,7 +26,7 @@ class StudentsController < ApplicationController
     
     def update
         @student.update(
-            student_params(:name, :year, :major)
+            student_params(:name, :major)
         )
         redirect_to @student
     end
