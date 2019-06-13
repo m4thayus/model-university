@@ -2,4 +2,4 @@
 <p><%= link_to @course.professor.name, @course.professor %> | <%= @course.time %></p>
 <p><%= @course.description %></p>
 
-<%= render partial: "shared/edit_delete_buttons", locals: {object: @course, path: "edit_course_path"} %>
+<%= render partial: "shared/edit_delete_buttons", locals: {object: @course} %>

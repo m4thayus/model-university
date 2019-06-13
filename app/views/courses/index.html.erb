@@ -1,7 +1,7 @@
 <h1>Courses#index</h1>
 <% @courses.each do |course| %>
     <div>
-        <h2><%= course.name %> | <%= link_to course.professor.name, course.professor %></h2>
+        <h2><%= link_to course.name, course %> | <%= link_to course.professor.name, course.professor %></h2>
         <h3> <%= course.time %></h3>
         <p><%= course.description %></p>
     </div>

@@ -1,4 +1,6 @@
-<%= link_to "Edit this #{object.class}", "#{object.id}/edit" %>
+<%= form_tag "#{object.id}/edit", method: "get" do %>
+    <%= submit_tag "Edit this #{object.class}" %>
+<% end %>
 
 <%= form_tag object, method: "delete" do %>
     <%= submit_tag "Delete this #{object.class}" %>
