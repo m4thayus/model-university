@@ -7,3 +7,5 @@
         <li> <%= link_to course.name, course %> | <%= course.time %></li>
     <% end %>
 </ul>
+
+<%= render partial: "shared/edit_delete_buttons", locals: {object: @professor} %>
